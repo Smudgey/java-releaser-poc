@@ -134,3 +134,36 @@ trait BintrayMavenPaths extends PathBuilder{
   }
 
 }
+
+trait BintrayGradlePaths extends PathBuilder{
+
+  override def filenameFor( v:VersionDescriptor, suffix:String):String={
+    s"${v.artefactName}-${v.version.value}$suffix"
+  }
+
+  def jarFilenameFor(v:VersionDescriptor):String={
+    s"${v.artefactName}-${v.version.value}.jar"
+  }
+
+  def jarDownloadFor(v:VersionDescriptor):String={
+    val fileName = jarFilenameFor(v)
+    s"$bintrayRepoRoot/${v.repo}/uk/gov/hmrc/${v.artefactName}/${v.version.value}/$fileName"
+  }
+
+  def jarUploadFor(v:VersionDescriptor):String={
+    val fileName = jarFilenameFor(v)
+    s"$bintrayApiRoot/maven/hmrc/${v.repo}/${v.artefactName}/uk/gov/hmrc/${v.artefactName}/${v.version.value}/$fileName"
+  }
+
+  def filePrefixFor(v: VersionDescriptor) = s"${v.artefactName}-${v.version.value}"
+
+  def fileDownloadFor(v: VersionDescriptor, fileName:String)={
+    s"$bintrayRepoRoot/${v.repo}/uk/gov/hmrc/${v.artefactName}/${v.version.value}/$fileName"
+  }
+
+  def fileUploadFor(v: VersionDescriptor, fileName:String): String={
+    s"$bintrayApiRoot/maven/hmrc/${v.repo}/${v.artefactName}/uk/gov/hmrc/${v.artefactName}/${v.version.value}/$fileName"
+  }
+
+}
+

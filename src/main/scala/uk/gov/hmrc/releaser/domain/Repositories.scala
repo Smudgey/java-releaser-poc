@@ -42,7 +42,7 @@ trait MavenRepo extends RepoFlavour with BintrayMavenPaths{
   val artefactBuilder = MavenArtefacts.apply _
 }
 
-trait GradleRepo extends RepoFlavour with BintrayMavenPaths{
+trait GradleRepo extends RepoFlavour with BintrayGradlePaths{
   val scalaVersion = ""
   val artefactBuilder = GradleArtefacts.apply _
 }
