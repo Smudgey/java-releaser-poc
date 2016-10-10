@@ -52,7 +52,7 @@ object HmrcBuild extends Build {
 
 object AssemblySettings{
   def apply()= Seq(
-    assemblyJarName in assembly := "releaser.jar",
+    assemblyJarName in assembly := "java-releaser-poc.jar",
     assemblyMergeStrategy in assembly := {
       case PathList("org", "apache", "commons", "logging", xs@_*) => MergeStrategy.first
       case PathList("play", "core", "server", xs@_*) => MergeStrategy.first
@@ -79,9 +79,9 @@ object BuildDescriptionSettings {
         </license>
       </licenses>
       <scm>
-        <connection>scm:git@github.com:hmrc/releaser.git</connection>
-        <developerConnection>scm:git@github.com:hmrc/releaser.git</developerConnection>
-        <url>git@github.com:hmrc/releaser.git</url>
+        <connection>scm:git@github.com:hmrc/java-releaser-poc.git</connection>
+        <developerConnection>scm:git@github.com:hmrc/java-releaser-poc.git</developerConnection>
+        <url>git@github.com:hmrc/java-releaser-poc.git</url>
       </scm>
       <developers>
         <developer>
