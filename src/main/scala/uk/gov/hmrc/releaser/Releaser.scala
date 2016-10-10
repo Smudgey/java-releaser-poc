@@ -88,7 +88,7 @@ object Releaser {
              gitHubName:String,
              dryRun:Boolean = false
              ):Int={
-    val tmpDir = Files.createTempDirectory("releaser")
+    val tmpDir = Files.createTempDirectory("java-releaser-poc")
 
     val githubCredsFile  = System.getProperty("user.home") + "/.github/.credentials"
     val bintrayCredsFile = System.getProperty("user.home") + "/.bintray/.credentials"

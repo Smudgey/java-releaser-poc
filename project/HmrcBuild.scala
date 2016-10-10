@@ -25,7 +25,7 @@ import uk.gov.hmrc.versioning.SbtGitVersioning
 
 object HmrcBuild extends Build {
 
-  val appName = "releaser"
+  val appName = "java-releaser-poc"
 
   val libraries = Seq(
     "com.typesafe.play" %% "play-ws" % "2.3.8",

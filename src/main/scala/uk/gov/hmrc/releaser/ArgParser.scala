@@ -29,7 +29,7 @@ object ArgParser{
 
   val currentVersion = getClass.getPackage.getImplementationVersion
 
-  val parser = new scopt.OptionParser[Config]("releaser") {
+  val parser = new scopt.OptionParser[Config]("java-releaser-poc") {
     override def showUsageOnError = false
     head(s"\nHMRC Releaser", s"$currentVersion\n")
     help("help") text "prints this usage text"

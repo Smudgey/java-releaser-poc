@@ -23,7 +23,7 @@ import uk.gov.hmrc.releaser.{GradleArtefacts, IvyArtefacts, MavenArtefacts, Tran
 import scala.util.{Failure, Success, Try}
 
 trait RepoFlavour extends PathBuilder{
-  val workDir:Path = Files.createTempDirectory("releaser")
+  val workDir:Path = Files.createTempDirectory("java-releaser-poc")
 
   def scalaVersion:String
   def releaseCandidateRepo:String
